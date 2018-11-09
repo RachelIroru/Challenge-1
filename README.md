@@ -1,6 +1,6 @@
 # Responsive Web Design Project - Build a Technical Documentation Page
 
-# Objective: Build a project that is functionally similar to this
+#####Objective: Build a project that is functionally similar to this
 
 # Fulfill the below user stories. Feel free to give it your own personal style.
 
