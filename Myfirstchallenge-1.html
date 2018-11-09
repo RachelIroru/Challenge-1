@@ -51,7 +51,7 @@ body {
 </head>
 <body>
 <div class="sidenav">
-        <h1 class="Rachel"><b>JS INTRODUCTIONS </b></h4>
+        <h1 class="Rachel"><b>JS INTRODUCTIONS </b></h1>
 <a href="#">Introductions</a>
   <a href="#">What you should already know</a>
   <a href="#">JavaScript and Java</a>
@@ -69,7 +69,7 @@ body {
 </div>
 
 <div class="content">
-  <h2>Introductions</h2>
+  <H1>Introductions</H1>
   <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
   </p>
         <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
@@ -79,8 +79,8 @@ body {
 </div>
 
 <div class="content">
-        <h2>What you should already know
-                 </h2>
+        <H1>What you should already know
+        </H1>
         <p>This guide assumes you have the following basic background:
         </p>
               <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
@@ -91,8 +91,8 @@ body {
       </div>
 
       <div class="content">
-            <h2>JavaScript and Java
-                     </h2>
+            <H1>JavaScript and Java
+            </H1>
             <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.
             </p>
                   <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
@@ -102,8 +102,8 @@ body {
           </div>
     
           <div class="content">
-                <h2>Hello world
-                         </h2>
+                <H1>Hello world
+                </H1>
                 <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
                 </p>
                       
@@ -115,8 +115,8 @@ body {
                                 </p>  
               </div>
               <div class="content">
-                    <h2>Variables
-                             </h2>
+                    <H1>Variables
+                    </H1>
                     <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
                     </p>
                           
@@ -126,8 +126,8 @@ body {
                   </div>
     
                   <div class="content">
-                        <h2>Declaring variables
-                                 </h2>
+                        <H1>Declaring variables
+                        </H1>
                         <p>You can declare a variable in three ways:
                         </p>
                               
@@ -150,8 +150,8 @@ body {
                       </div>
         
                       <div class="content">
-                            <h2>Variable scope
-                                     </h2>
+                            <H1>Variable scope
+                            </H1>
                             <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.
                             </p>
                                   
@@ -172,8 +172,8 @@ body {
                           </div>
             
                           <div class="content">
-                            <h2>Global variables
-                                     </h2>
+                            <H1>Global variables
+                            </H1>
                             <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.
                             </p>
                                   
@@ -183,8 +183,8 @@ body {
             
 
                           <div class="content">
-                                <h2>Constants
-                                    </h2>
+                                <H1>Constants
+                                </H1>
                            <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.
                            </p>
                            <p> &nbsp; &nbsp;&nbsp;&nbsp; const PI = 3.14;</p>    
@@ -197,19 +197,42 @@ body {
                                     <p>// THIS WILL CAUSE AN ERROR</p>
                                     <p> &nbsp; &nbsp;&nbsp;  function f() {};</p>
                                     <p> &nbsp; &nbsp;&nbsp; const f = 5;</p>     
-                                                    <p>&nbsp; &nbsp;&nbsp;console.log(x);  // 5
+                                                    <p>&nbsp; &nbsp;&nbsp;// THIS WILL CAUSE AN ERROR ALSO
                                                         </p>
-                                                        <p> This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
-                                                        <p>if (true) {
-                                                            </p>
-                                                            <p> &nbsp; &nbsp;&nbsp;&nbsp;  let y = 5;</p>
-                                                            <p> &nbsp; &nbsp;&nbsp;   }</p>
-                                                            <p> &nbsp; &nbsp;&nbsp;&nbsp; console.log(y);</p>
-                                                            <p> &nbsp; &nbsp;&nbsp;&nbsp; // ReferenceError: y is not defined</p>
+                
+                                                            <p> &nbsp; &nbsp;&nbsp;&nbsp; function f() { </p>
+                                                            <p> &nbsp; &nbsp;&nbsp; &nbsp; const g = 5;  </p>
+                                                            <p> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; var g; </p>
+                                                            <p> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; //statements </p>
+                                                             <p>} </p>
+                                                             <p>However, object attributes are not protected, so the following statement is executed without problems.</p>
+                                                             <p> &nbsp; &nbsp;&nbsp;  const MY_OBJECT = {"key": "value"};</p>
+                                                             <p> &nbsp; &nbsp;&nbsp;&nbsp;  MY_OBJECT.key = "otherValue";</p>  
+                         
+                                                           </div>
+
+<div>
+    <div class="content">
+        <H1>Data types</H1>  
+    <p>The latest ECMAScript standard defines seven data types: </p>
+    <p>&nbsp; .</p>
+    <p>&nbsp;Six data types that are primitives:</p>
+    <p> <li>&nbsp;&nbsp;&nbsp;Boolean. true and false.</li>
+        <li>&nbsp;&nbsp;&nbsp;null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+        <li>&nbsp;&nbsp;&nbsp;undefined. A top-level property whose value is undefined.</li>
+        <li>&nbsp;&nbsp;&nbsp;Number. 42 or 3.14159.</li>
+        <li>&nbsp;&nbsp;&nbsp;String. "Howdy"</li>
+        <li>&nbsp;&nbsp;&nbsp;Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+        <li>and Object</li>
+        <p>Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform.</p>
+    </p>
+       
+</div>
+     
 
 
-                                
-                         </div>
+
+
 
 
 
